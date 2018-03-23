@@ -1,1 +1,1 @@
-# open_rec
+# OpenRec README
