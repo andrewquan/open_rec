@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'omniauth'
 
 group :development, :test do
   gem 'pry'
