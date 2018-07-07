@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-andrew = User.create(email: 'andrew@example.com', password: 'password')
-bobby = User.create(email: 'bobby@example.com', password: 'password')
+# andrew = User.create(email: 'andrew@example.com', password: 'password')
+# bobby = User.create(email: 'bobby@example.com', password: 'password')
 
-# Events
-events = Event.create([{ name: 'Beach Volleyball', description: 'Fun in the sun!' }, { name: 'Dodgeball', description: 'If you can dodge a wrench, you can dodge a ball!' }])
+# # Events
+# events = Event.create([{ name: 'Beach Volleyball', description: 'Fun in the sun!' }, { name: 'Dodgeball', description: 'If you can dodge a wrench, you can dodge a ball!' }])
