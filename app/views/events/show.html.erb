@@ -1,8 +1,25 @@
-<div class="card" style="width: 18rem;">
-  <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
-  <div class="card-body">
-    <h5 class="card-title"><%= @event.name %></h5>
-    <p class="card-text"><%= @event.description %></p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+  <div class="row">
+    <div class="jumbotron">
+      <h1 class="display-4"></h1>
+      <%= content_tag :p, "#{@event.name}", class: "lead" %>
+      <hr class="my-4">
+      <%= content_tag :p, "#{@event.description}" %>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%= content_tag :p, "some content goes here" %>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <%= content_tag :h5, "Attendees" %>
+          <%= content_tag :p, "Here it will show who is attending", class: "card-text" %>
+          <%= link_to "See more", "#", class: "card-link" %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
