@@ -1,25 +1,52 @@
 <div class="container">
-  <div class="row">
-    <div class="jumbotron">
-      <h1 class="display-4"></h1>
-      <%= content_tag :p, "#{@event.name}", class: "lead" %>
-      <hr class="my-4">
-      <%= content_tag :p, "#{@event.description}" %>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <div class="row" style="background-color:lightyellow;">
+    <div class="col" style="padding:10px;">
+      <div class="jumbotron">
+        <h1 class="display-4"></h1>
+        <%= content_tag :p, "#{@event.name}", class: "lead" %>
+        <hr class="my-4">
+        <%= content_tag :p, "#{@event.description}" %>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
+  <div class="row" style="background-color:lightblue;">
+    <div class="col" style="padding:10px;">
       <%= content_tag :p, "some content goes here" %>
     </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
+    <div class="col" style="padding:10px;">
+      <div class="card">
         <div class="card-body">
           <%= content_tag :h5, "Attendees" %>
           <%= content_tag :p, "Here it will show who is attending", class: "card-text" %>
           <%= link_to "See more", "#", class: "card-link" %>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row" style="background-color:lightblue;">
+    <div class="col" style="padding:10px;">
+      <div class="card">
+        <div class="card-body">
+          <%= content_tag :h5, "Description" %>
+          <%= content_tag :p, "Here it will show details about the event", class: "card-text" %>
+          <%= link_to "See more", "#", class: "card-link" %>
+        </div>
+      </div>
+    </div>
+    <div class="col" style="padding:10px;">
+      <div class="card">
+        <div class="card-body">
+          <%= content_tag :h5, "Comments" %>
+          <%= content_tag :p, "Here it will show comments", class: "card-text" %>
+          <%= link_to "See more", "#", class: "card-link" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background-color:lightgreen;">
+    <div class="col" style="padding:10px;">
+      <img class="img-fluid" src="http://fjaerestad.no/wp-content/uploads/2015/04/geolocation_and_google_maps.jpg">
     </div>
   </div>
 </div>
