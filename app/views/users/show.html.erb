@@ -1,1 +1,24 @@
-<%= content_tag :h3, "Hello, this is a temporary User page for #{@user.email}!" %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-4"></h1>
+        <%= content_tag :p, "Temporary User page title for #{@user.email}!" %>
+        <hr class="my-4">
+        <%= content_tag :p, "Some information about #{@user.email}" %>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <%= content_tag :h5, "Some info about #{@user.email}" %>
+          <%= content_tag :p, "#{@user.email} is so cool!", class: "card-text" %>
+          <%= link_to "Edit Account", edit_user_path, class: "card-link" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

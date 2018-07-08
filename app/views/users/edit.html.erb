@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= content_tag :h1, "Edit info for #{@user.email}!" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <%= content_tag :h5, "Some info about #{@user.email}" %>
+          <%= content_tag :p, "Need to add attributes before we can change anything", class: "card-text" %>
+          <%= link_to "Change Password", "#", class: "card-link" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
