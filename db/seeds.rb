@@ -7,8 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-# andrew = User.create(email: 'andrew@example.com', password: 'password')
-# bobby = User.create(email: 'bobby@example.com', password: 'password')
+andrew = User.new(email: 'andrew@example.com', password: 'password', password_confirmation: 'password')
+andrew.skip_confirmation!
+andrew.save!
+bobby = User.new(email: 'bobby@example.com', password: 'password', password_confirmation: 'password')
+bobby.skip_confirmation!
+bobby.save!
 
-# # Events
-# events = Event.create([{ name: 'Beach Volleyball', description: 'Fun in the sun!' }, { name: 'Dodgeball', description: 'If you can dodge a wrench, you can dodge a ball!' }])
+# Groups
+average_joes = Group.create(name: 'Average Joes', description: "Just a bunch of average Joes.")
+purple_cobras = Group.create(name: 'Purple Cobras', description: "We ARE the Globo Gym Purple Cobras... and we will, we will, rock you!")
+
+# Events
+beach_volleyball = Event.create(name: 'Beach Volleyball', description: 'Fun in the sun!', group_id: purple_cobras.id)
+dodgeball = Event.create(name: 'Dodgeball', description: 'If you can dodge a wrench, you can dodge a ball!', group_id: average_joes.id)
