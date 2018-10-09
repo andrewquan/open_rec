@@ -4,6 +4,8 @@
       <div class="jumbotron">
         <h1 class="display-4"></h1>
         <%= content_tag :p, "#{@event.name}", class: "lead" %>
+        <!-- owners (admins too?) can create a template out of existing event -->
+        <button type="button" class="btn btn-secondary float-right">Create template</button>
         <hr class="my-4">
         <%= content_tag :p, "#{@event.description}" %>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
