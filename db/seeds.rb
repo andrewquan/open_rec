@@ -21,3 +21,11 @@ purple_cobras = Group.create(name: 'Purple Cobras', description: "We ARE the Glo
 # Events
 beach_volleyball = Event.create(name: 'Beach Volleyball', description: 'Fun in the sun!', group_id: purple_cobras.id)
 dodgeball = Event.create(name: 'Dodgeball', description: 'If you can dodge a wrench, you can dodge a ball!', group_id: average_joes.id)
+
+
+
+
+
+
+andrew.groups << average_joes
+bobby.groups << purple_cobras

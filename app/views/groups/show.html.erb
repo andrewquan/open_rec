@@ -16,6 +16,9 @@
         <div class="card-body">
           <%= content_tag :h5, "Members" %>
           <ul>
+            <% @group.members.each do |member| %>
+              <%= link_to "<li>#{member.email}</li>".html_safe, user_path(member.id) %>
+            <% end %>
             <% 5.times do %>
               <li>A member</li>
             <% end %>
