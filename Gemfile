@@ -18,6 +18,8 @@ gem 'devise'
 gem 'bootstrap', '~> 4.1.2'
 gem 'jquery-rails'
 gem 'omniauth'
+gem 'simple_form'
+gem 'kaminari'
 
 group :development, :test do
   gem 'pry'
