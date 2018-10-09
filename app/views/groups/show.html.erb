@@ -3,7 +3,7 @@
     <div class="col">
       <div class="jumbotron">
         <h1 class="display-4"></h1>
-        <%= content_tag :p, "Temporary Group page title!" %>
+        <%= content_tag :p, "Group banner, generic default picture (options to be provided), or even group movie" %>
         <hr class="my-4">
         <%= content_tag :p, "Some information about the group" %>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
@@ -11,11 +11,33 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <%= content_tag :h5, "Members" %>
+          <ul>
+            <% 5.times do %>
+              <li>A member</li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <%= content_tag :h5, "Some info about the group" %>
-          <%= content_tag :p, "This group is so cool!", class: "card-text" %>
+          <%= content_tag :h5, "Some info about the group (recent events, etc.)" %>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <%= link_to "Upcoming Events", "#", class: "nav-link active" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Past Events", "#", class: "nav-link" %>
+            </li>
+          </ul>
+          <!-- need to handle tabs -->
+          <%= render 'upcoming_events' %>
+          <%= render 'past_events' %>
         </div>
       </div>
     </div>
