@@ -3,9 +3,9 @@
     <div class="col">
       <div class="jumbotron">
         <h1 class="display-4"></h1>
-        <%= content_tag :p, "Group banner, generic default picture (options to be provided), or even group movie" %>
+        <%= content_tag :p, "#{@group.name} group banner, generic default picture (options to be provided), or even group movie" %>
         <hr class="my-4">
-        <%= content_tag :p, "Some information about the group" %>
+        <%= content_tag :p, "Some information about the #{@group.name}" %>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
     </div>
