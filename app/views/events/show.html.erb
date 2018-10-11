@@ -20,7 +20,11 @@
       <div class="card">
         <div class="card-body">
           <%= content_tag :h5, "Attendees" %>
-          <%= content_tag :p, "Here it will show who is attending", class: "card-text" %>
+          <ul>
+            <% @event.attendees.each do |attendee| %>
+              <%= link_to "<li>#{attendee.email}</li>".html_safe, user_path(attendee) %>
+            <% end %>
+          </ul>
           <%= link_to "See more", "#", class: "card-link" %>
         </div>
       </div>
