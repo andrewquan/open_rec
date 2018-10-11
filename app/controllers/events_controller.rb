@@ -17,7 +17,8 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      # code to make current_user attend event
+      current_user.attend_event(@event.id)
+      # need to add logic to add user as admin
       flash[:success] = "Event created."
       redirect_to @event
     else
