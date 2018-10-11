@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   has_many :memberships
   has_many :groups, through: :memberships
+  has_many :reservations
+  has_many :events, through: :reservations
 
   def join_group(group_id)
     self.memberships.create(group_id: group_id)
