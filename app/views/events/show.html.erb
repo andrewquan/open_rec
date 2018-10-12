@@ -25,7 +25,7 @@
           <%= content_tag :h5, "Attendees" %>
           <ul>
             <% @event.attendees.each do |attendee| %>
-              <%= link_to "<li>#{attendee.email}</li>".html_safe, user_path(attendee) %>
+              <%= link_to "<li>#{attendee.username}</li>".html_safe, user_path(attendee) %>
             <% end %>
           </ul>
           <%= link_to "See more", "#", class: "card-link" %>
