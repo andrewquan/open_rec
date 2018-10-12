@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-andrew = User.new(email: 'andrew@example.com', password: 'password', password_confirmation: 'password')
+andrew = User.new(email: 'andrew@example.com', username: 'Drew', password: 'password', password_confirmation: 'password')
 andrew.skip_confirmation!
 andrew.save!
-bobby = User.new(email: 'bobby@example.com', password: 'password', password_confirmation: 'password')
+bobby = User.new(email: 'bobby@example.com', username: 'KingOfTheHill', password: 'password', password_confirmation: 'password')
 bobby.skip_confirmation!
 bobby.save!
 
