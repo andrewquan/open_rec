@@ -29,6 +29,17 @@
             <% end %>
           </ul>
           <%= link_to "See more", "#", class: "card-link" %>
+          <div class="row">
+            <div class="col">
+              <%= link_to "Join", attend_event_path(@event.id), method: :post, class: "btn btn-light" %>
+            </div>
+            <div class="col">
+              <%= link_to "Maybe", "#", class: "btn btn-light" %>
+            </div>
+            <div class="col">
+              <%= link_to "Cannot join", "#", class: "btn btn-light" %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
