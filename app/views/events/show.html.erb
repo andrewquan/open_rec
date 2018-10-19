@@ -3,9 +3,15 @@
     <div class="col" style="padding:10px;">
       <div class="jumbotron">
         <h1 class="display-4"></h1>
-        <%= content_tag :p, "#{@event.name}", class: "lead" %>
-        <!-- owners (admins too?) can create a template out of existing event -->
-        <button type="button" class="btn btn-secondary float-right">Create template</button>
+        <div class="row">
+          <div class="col">
+            <%= content_tag :p, "#{@event.name}", class: "lead" %>
+          </div>
+          <div class="col">
+            <!-- owners (admins too?) can create a template out of existing event -->
+            <button type="button" class="btn btn-secondary float-right">Create template</button>
+          </div>
+        </div>
         <hr class="my-4">
         <%= content_tag :p, "#{@event.description}" %>
         <%= content_tag :p do %>
@@ -48,7 +54,7 @@
     <div class="col" style="padding:10px;">
       <div class="card">
         <div class="card-body">
-          <%= content_tag :h5, "Description" %>
+          <%= content_tag :h5, "Details" %>
           <%= content_tag :p, "Here it will show details about the event", class: "card-text" %>
           <%= link_to "See more", "#", class: "card-link" %>
         </div>
