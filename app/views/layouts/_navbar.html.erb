@@ -7,24 +7,29 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <% unless current_user %>
+        <% if current_user %>
           <li class="nav-item">
-            <%= link_to "Login", user_session_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-          </li>
-        <% end %>
-        <li class="nav-item dropdown">
-          <% if current_user %>
-            <%= link_to current_user.username, "#", {
-              class: "nav-link dropdown-toggle",
-              id: "navbarDropdown",
-              role: "button",
+            <%= button_tag "Create", {
+              class: "btn btn-success dropdown-toggle",
+              type: "button",
+              id: "createDropdown",
               data: { toggle: "dropdown" },
               aria: { haspopup: true, expanded: false }
               } %>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="createDropdown">
+              <%= link_to "Events", "#", class: "dropdown-item" %>
+              <%= link_to "Groups", "#", class: "dropdown-item" %>
+            </div>
+          </li>
+          <li class="nav-item">
+            <%= button_tag current_user.username, {
+              class: "btn btn-secondary dropdown-toggle",
+              type: "button",
+              id: "userDropdown",
+              data: { toggle: "dropdown" },
+              aria: { haspopup: true, expanded: false }
+              } %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
               <h6 class="dropdown-header">About You</h6>
               <%= link_to "Your Page", current_user, class: "dropdown-item" %>
               <%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item" %>
@@ -37,8 +42,15 @@
                 method: :delete,
                 class: "dropdown-item" } %>
             </div>
-          <% end %>
-        </li>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </nav>
