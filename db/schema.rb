@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20181019125545) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "group_id"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "start_datetime"
+    t.datetime "end_datetime"
   end
 
   create_table "groups", force: :cascade do |t|
