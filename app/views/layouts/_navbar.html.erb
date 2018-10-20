@@ -28,9 +28,12 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <h6 class="dropdown-header">About You</h6>
             <%= link_to "Your Page", current_user, class: "dropdown-item" %>
-            <%= link_to "Edit Personal Info", edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
-            <%= link_to "Settings", "#", class: "dropdown-item" %>
+            <h6 class="dropdown-header">Settings</h6>
+            <%= link_to "Account Settings", edit_user_registration_path, class: "dropdown-item", class: "dropdown-item" %>
+            <%= link_to "General Settings", "#", class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
             <%= link_to "Logout", destroy_user_session_path, {
               method: :delete,
               class: "dropdown-item" } %>

@@ -4,7 +4,7 @@
       <%= content_tag :h3, "Edit info for #{@user.username}!" %>
       <%= simple_form_for(@user) do |f| %>
         <!-- temporary - probably don't want to update this -->
-        <%= f.input :username %>
+        <%= f.input :about_me %>
         <%= f.submit "Update", class: "btn btn-primary" %>
       <% end %>
     </div>
