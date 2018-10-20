@@ -13,11 +13,17 @@
           </div>
         </div>
         <hr class="my-4">
-        <%= content_tag :p, "#{@event.description}" %>
-        <%= content_tag :p do %>
-          Hosted by <%= link_to @event.group.name, group_path(@event.group) %>
-        <% end %>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div class="row">
+          <div class="col">
+            <%= content_tag :p, "#{@event.description}" %>
+            <%= content_tag :p do %>
+              Hosted by <%= link_to @event.group.name, group_path(@event.group) %>
+            <% end %>
+          </div>
+          <div class="col">
+            <i class="fa fa-calendar"></i>&nbsp;<%= display_event_datetime(@event) %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
