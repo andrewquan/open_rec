@@ -1,21 +1,17 @@
 <div class="row">
-  <div class="col-sm">
+  <div class="col">
     <%= content_tag :h3, "Log in" %>
-    <div class="row">
-      <div class="col-sm">
-        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <%= f.input :email, autofocus: true, autocomplete: "email" %>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.input :email, autofocus: true, autocomplete: "email" %>
 
-          <%= f.input :password, autocomplete: "off" %>
+      <%= f.input :password, autocomplete: "off" %>
 
-          <% if devise_mapping.rememberable? -%>
-              <%= f.input :remember_me, as: :boolean %>
-          <% end -%>
+      <% if devise_mapping.rememberable? -%>
+          <%= f.input :remember_me, as: :boolean %>
+      <% end -%>
 
-          <%= f.submit "Log in", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-    </div>
+      <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
 

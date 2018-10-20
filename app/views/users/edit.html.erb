@@ -1,18 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <%= content_tag :h1, "Edit info for #{@user.email}!" %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <div class="card">
-        <div class="card-body">
-          <%= content_tag :h5, "Some info about #{@user.email}" %>
-          <%= content_tag :p, "Need to add attributes before we can change anything", class: "card-text" %>
-          <%= link_to "Change Password", "#", class: "card-link" %>
-        </div>
-      </div>
+      <%= content_tag :h3, "Edit info for #{@user.username}!" %>
+      <%= simple_form_for(@user) do |f| %>
+        <!-- temporary - probably don't want to update this -->
+        <%= f.input :username %>
+        <%= f.submit "Update", class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
 </div>
