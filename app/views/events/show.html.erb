@@ -28,8 +28,14 @@
     </div>
   </div>
   <div class="row" style="background-color:lightblue;">
-    <div class="col" style="padding:10px;">
-      <%= content_tag :p, "some content goes here" %>
+    <div class="col-7" style="padding:10px;">
+      <div class="card">
+        <div class="card-body">
+          <%= content_tag :h5, "Details" %>
+          <%= content_tag :p, "Here it will show details about the event", class: "card-text" %>
+          <%= link_to "See more", "#", class: "card-link" %>
+        </div>
+      </div>
     </div>
     <div class="col" style="padding:10px;">
       <div class="card">
@@ -56,16 +62,7 @@
       </div>
     </div>
   </div>
-  <div class="row" style="background-color:lightblue;">
-    <div class="col" style="padding:10px;">
-      <div class="card">
-        <div class="card-body">
-          <%= content_tag :h5, "Details" %>
-          <%= content_tag :p, "Here it will show details about the event", class: "card-text" %>
-          <%= link_to "See more", "#", class: "card-link" %>
-        </div>
-      </div>
-    </div>
+  <div class="row" style="background-color:lightblue">
     <div class="col" style="padding:10px;">
       <div class="card">
         <div class="card-body">
