@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'simple_form'
 gem 'kaminari'
+gem "font-awesome-rails"
 gem 'mini_racer' # Fixes 'Autoprefixer doesn’t support Node' issue
 
 group :development, :test do

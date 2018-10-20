@@ -83,6 +83,8 @@ GEM
     faker (1.9.1)
       i18n (>= 0.7)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashie (3.5.7)
@@ -107,6 +109,7 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    libv8 (6.7.288.46.1)
     libv8 (6.7.288.46.1-x86_64-darwin-17)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -254,6 +257,7 @@ DEPENDENCIES
   devise
   factory_bot
   faker
+  font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
