@@ -1,16 +1,12 @@
 <div class="row">
-  <div class="col-sm">
+  <div class="col">
     <%= content_tag :h3, "Create new event" %>
-    <div class="row">
-      <div class="col-sm">
-        <%= simple_form_for @event do |f| %>
-          <%= f.input :name %>
-          <%= f.input :description %>
-          <%= f.input :group_id, collection: @groups %>
-          <%= f.submit "Create Event", class: "btn btn-primary" %>
-          <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-        <% end %>
-      </div>
-    </div>
+    <%= simple_form_for @event do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :group_id, collection: @groups %>
+      <%= f.submit "Create Event", class: "btn btn-primary" %>
+      <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+    <% end %>
   </div>
 </div>
