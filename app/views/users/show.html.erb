@@ -14,9 +14,8 @@
     <div class="col">
       <div class="card">
         <div class="card-body">
-          <%= content_tag :h5, "#{@user.username}'s recent activity and other stuff" %>
+          <%= content_tag :h5, "#{@user.username}'s recent activity, upcoming events, and other stuff" %>
           <%= content_tag :p, "#{@user.username} is so cool!", class: "card-text" %>
-          <%= link_to "Edit Account", edit_user_path, class: "card-link" %>
         </div>
       </div>
     </div>
