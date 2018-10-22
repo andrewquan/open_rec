@@ -19,6 +19,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def groups
+    @groups = User.find(params[:id]).groups
+  end
+
   private
 
     def user_params

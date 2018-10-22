@@ -1,0 +1,11 @@
+<% @groups.each do |group| %>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <%= content_tag :h5, "#{group.name}" %>
+        <%= content_tag :p, "#{group.description}" %>
+        <%= link_to "#{group.name}'s Page", group, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

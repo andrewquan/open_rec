@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks'
   }
 
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    member do
+      get :groups
+    end
+  end
+
   resources :groups
   resources :events do
     member do

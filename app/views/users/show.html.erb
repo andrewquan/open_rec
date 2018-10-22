@@ -29,6 +29,8 @@
               <%= link_to "<li>#{group.name}</li>".html_safe, group_path(group.id) %>
             <% end %>
           </ul>
+          <!-- need to fix the username later -->
+          <%= link_to "See #{@user.username}'s/your groups", groups_user_path(@user.id), class: 'btn btn-primary' %>
         </div>
       </div>
     </div>
