@@ -23,6 +23,7 @@ gem 'kaminari'
 gem "font-awesome-rails"
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem 'file_validators'
 gem 'mini_racer' # Fixes 'Autoprefixer doesn’t support Node' issue
 
 group :development, :test do

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :image, ImageUploader
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
@@ -16,7 +18,8 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :events, through: :reservations
 
-  mount_uploader :image, ImageUploader
+  validates :username, presence: true
+  validates :image, file_size: { less_than: 1.megabytes }
 
   def join_group(group_id, role={})
     self.memberships.create(group_id: group_id)
