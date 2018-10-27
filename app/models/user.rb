@@ -16,6 +16,8 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :events, through: :reservations
 
+  mount_uploader :image, ImageUploader
+
   def join_group(group_id, role={})
     self.memberships.create(group_id: group_id)
     # need to add logic for becoming group admin or other roles
