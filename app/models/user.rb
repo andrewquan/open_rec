@@ -24,6 +24,11 @@ class User < ApplicationRecord
   def join_group(group_id, role={})
     self.memberships.create(group_id: group_id)
     # need to add logic for becoming group admin or other roles
+    # need to add logic for admin approval
+  end
+
+  def group_member?(group_id)
+    groups.pluck(:id).include?(group_id)
   end
 
   def attend_event(event_id, role={})

@@ -6,7 +6,9 @@
         <%= content_tag :p, "#{@group.name} group banner, generic default picture (options to be provided), or even group movie" %>
         <hr class="my-4">
         <%= content_tag :p, "Some information about the #{@group.name}" %>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <% unless current_user.group_member?(@group.id) %>
+          <%= link_to "Join Group", join_group_path(@group.id), method: :post, class: 'btn btn-primary' %>
+        <% end %>
       </div>
     </div>
   </div>

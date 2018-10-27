@@ -15,7 +15,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :groups
+  resources :groups do
+    member do
+      post :join
+    end
+  end
+
   resources :events do
     member do
       post :attend
