@@ -11,7 +11,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
-    @groups = Group.all # fix this to show just user's admin authorized groups
+    @groups = current_user.groups # fix this to show just user's admin authorized groups
   end
 
   def create
