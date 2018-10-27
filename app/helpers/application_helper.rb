@@ -1,13 +1,13 @@
 module ApplicationHelper
   def flash_messages(type)
     case type
-    when :notice
+    when 'notice'
       "alert alert-info"
-    when :success
+    when 'success'
       "alert alert-success"
-    when :error
+    when 'error'
       "alert alert-danger"
-    when :warning
+    when 'warning'
       "alert alert-warning"
     end
   end
