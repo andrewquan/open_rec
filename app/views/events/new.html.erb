@@ -5,6 +5,8 @@
       <%= f.input :name %>
       <%= f.input :description %>
       <%= f.input :group_id, collection: @groups %>
+      <%= f.input :start_datetime, as: :string, :input_html => { :id => "datetimepicker1" } %>
+      <%= f.input :end_datetime, as: :string, :input_html => { :id => "datetimepicker2" } %>
       <%= f.submit "Create Event", class: "btn btn-primary" %>
       <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
     <% end %>

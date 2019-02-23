@@ -10,9 +10,24 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require tempusdominus-bootstrap-4.js
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+$(function () {
+  $('#datetimepicker1').datetimepicker();
+  $('#datetimepicker2').datetimepicker({
+    useCurrent: false
+  });
+  $("#datetimepicker1").on("change.datetimepicker", function (e) {
+    $('#datetimepicker2').datetimepicker('minDate', e.date);
+  });
+  $("#datetimepicker2").on("change.datetimepicker", function (e) {
+    $('#datetimepicker1').datetimepicker('maxDate', e.date);
+  });
+});
