@@ -6,6 +6,7 @@ class Event < ApplicationRecord
   validates_presence_of :start_datetime
 
   def same_day_event?
+    return false if end_datetime.blank?
     start_datetime.to_date == end_datetime.to_date
   end
 end
