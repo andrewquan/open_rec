@@ -18,7 +18,7 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :events, through: :reservations
 
-  validates :username, presence: true
+  validates_presence_of :username
   validates :image, file_size: { less_than: 1.megabytes }
 
   def join_group(group_id, role={})
