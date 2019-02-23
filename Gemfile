@@ -31,7 +31,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -46,6 +46,8 @@ group :test do
   gem 'capybara', '~> 2.13'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
