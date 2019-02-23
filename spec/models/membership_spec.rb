@@ -1,5 +1,5 @@
 require 'rails_helper'
 
 RSpec.describe Membership, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { expect(subject).to validate_uniqueness_of(:user_id).scoped_to([:group_id]) }
 end
