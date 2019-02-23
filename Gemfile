@@ -30,11 +30,8 @@ gem 'mini_racer' # Fixes 'Autoprefixer doesn’t support Node' issue
 group :development, :test do
   gem 'pry'
   gem 'pry-rails'
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-  gem 'rspec-rails', '~> 3.7'
+  gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot'
-  gem 'faker'
 end
 
 group :development do
@@ -42,6 +39,13 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara', '~> 2.13'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
